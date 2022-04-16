@@ -1,14 +1,10 @@
-# py-etherscan-api module
+# py-etherscan-api module with Rinkebt
 
-[![Build Status](https://secure.travis-ci.org/corpetty/py-etherscan-api.png?branch=master)](http://travis-ci.org/corpetty/py-etherscan-api) [![Join the chat at https://gitter.im/py-etherscan/Lobby](https://badges.gitter.im/py-etherscan/Lobby.svg)](https://gitter.im/py-etherscan/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-EtherScan.io API python bindings
 
 ## Description
 
-This module is written as an effort to provide python bindings to the EtherScan.io API, which can be found at:
-https://etherscan.io/apis. If you are interacting with a contract on the Ropsten Testnet please use
-https://ropsten.etherscan.io/apis.
+
 In order to use this, you must attain an Etherscan user account, and generate an API key.
 
 In order to use the API, you must provide an API key at runtime, which can be found at the Etherscan.io API website.
@@ -47,6 +43,7 @@ Currently, this works for the following networks:
 
 - Mainnet
 - Ropsten
+- Rinkeby
 
 ## Examples
 
