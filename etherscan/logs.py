@@ -10,8 +10,8 @@ class Logs(Client):
     """
     The Event Log API was designed to provide an alternative to the native eth_getLogs.
     """
-    def __init__(self, api_key='YourApiKeyToken'):
-        Client.__init__(self, address='', api_key=api_key)
+    def __init__(self, address='', api_key='YourApiKeyToken'):
+        Client.__init__(self, address=address, api_key=api_key)
         self.url_dict[self.MODULE] = 'logs'
     
     def get_logs(self, from_block: str, to_block='latest', 
