@@ -122,8 +122,10 @@ class Client(object):
     def connect(self):
         # TODO: deal with "unknown exception" error
         try:
-            print(self.url)
-            req = self.http.get(self.url)
+            #print(self.url)
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+            req = self.http.get(self.url, headers=headers)
             
         except requests.exceptions.ConnectionError:
             raise ConnectionRefused
