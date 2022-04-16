@@ -38,9 +38,9 @@ class InvalidAPIKey(ClientException):
 #  file under variable name "key"
 class Client(object):
     dao_address = '0xbb9bc244d798123fde783fcc1c72d3bb8c189413'
-
+    #PREFIX = 'https://api.etherscan.io/api?'
     # Constants
-    PREFIX = 'https://api.etherscan.io/api?'
+    PREFIX = 'https://api-rinkeby.etherscan.io/api?'
     MODULE = 'module='
     ACTION = '&action='
     CONTRACT_ADDRESS = '&contractaddress='
@@ -150,3 +150,6 @@ class Client(object):
     @staticmethod
     def check_keys_api(data):
         return all(k in data for k in ('jsonrpc', 'id', 'result'))
+    
+    
+    
