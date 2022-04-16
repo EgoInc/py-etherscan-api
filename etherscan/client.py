@@ -140,7 +140,8 @@ class Client(object):
                 elif status == '0' and data.get('result') == "Invalid API Key":
                     raise InvalidAPIKey(data.get('result'))
                 else:
-                    raise EmptyResponse(data.get('message', 'no message'))
+                    data['message']="No transactions found"
+                    return data
         raise BadRequest(
             "Problem with connection, status code: %s" % req.status_code)
 
