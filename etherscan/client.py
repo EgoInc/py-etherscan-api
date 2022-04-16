@@ -122,7 +122,9 @@ class Client(object):
     def connect(self):
         # TODO: deal with "unknown exception" error
         try:
+            print(self.url)
             req = self.http.get(self.url)
+            
         except requests.exceptions.ConnectionError:
             raise ConnectionRefused
 
